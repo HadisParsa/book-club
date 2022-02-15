@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HadisParsa/vigilance-fullstack">
-    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojidex/112/page-facing-up_1f4c4.png" alt="Logo" width="80" height="80">
+    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/285/books_1f4da.png">
   </a>
 
 <h3 align="center">Book Club</h3>
