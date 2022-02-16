@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../components/styles/style.css';
 
 function Form() {
-  // Here we set two state variables for firstName and lastName using `useState`
+  // Here we set two state variables for storyTitle and userStory using `useState`
   const [storyTitle, setStoryTitle] = useState('');
   const [userStory, setUserStory] = useState('');
 
@@ -10,7 +10,7 @@ function Form() {
     // Getting the value and name of the input which triggered the change
     const { story, value } = e.target;
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+    // Ternary statement that will call either setStoryTitle or setUserStory based on what field the user is typing in
     return story === 'storyTitle' ? setStoryTitle(value) : setUserStory(value);
   };
 
@@ -18,26 +18,24 @@ function Form() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // Alert the user their first and last name, clear the inputs
-    alert(`Title: ${storyTitle} ${userStory}`);
+    // Alert the user their story is submitted
+    alert(` Your "${storyTitle}" is successfully submitted.`);
     setStoryTitle('');
     setUserStory('');
   };
 
   return (
-    <div>
-      <h1>
-        Title: {storyTitle} </h1>
-      <p>
-        {userStory}
-      </p>
-      <form className="form">
+    <form>
+      <div className="form-group">
+        <p>
+          Title: {storyTitle} {userStory}
+        </p>
         <input
           value={storyTitle}
           name="storyTitle"
           onChange={handleInputChange}
           type="text"
-          placeholder="Story Title"
+          placeholder="Story title"
         />
         <input
           value={userStory}
@@ -49,8 +47,9 @@ function Form() {
         <button type="button" onClick={handleFormSubmit}>
           Submit
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
+
   );
 }
 

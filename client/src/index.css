@@ -1706,3 +1706,7 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+.small {
+  font-weight: 300;
+  font-style: italic;
+}

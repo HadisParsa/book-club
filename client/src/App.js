@@ -12,6 +12,9 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Story from './pages/Story';
+//
+import SearchBooks from './pages/SearchBooks';
+
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -56,8 +59,11 @@ function App() {
 
             <Route exact path="/story">
               <Story />
-            </Route>
 
+            </Route>
+            <Route exact path="/SearchBooks">
+              <SearchBooks />
+            </Route>
 
             <Route exact path="/login">
               <Login />
