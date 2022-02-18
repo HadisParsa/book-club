@@ -8,10 +8,10 @@ function Form() {
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
-    const { story, value } = e.target;
+    const { name, value } = e.target;
 
     // Ternary statement that will call either setStoryTitle or setUserStory based on what field the user is typing in
-    return story === 'storyTitle' ? setStoryTitle(value) : setUserStory(value);
+    return name === 'storyTitle' ? setStoryTitle(value) : setUserStory(value);
   };
 
   const handleFormSubmit = (e) => {
@@ -37,6 +37,7 @@ function Form() {
           type="text"
           placeholder="Story title"
         />
+
         <input
           value={userStory}
           name="userStory"
