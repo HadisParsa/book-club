@@ -1,72 +1,49 @@
 // We have to first import `useState` with React in order to take advantage of the hook
-import React, { useState } from 'react';
-import { Col, Button, Card, CardColumns, Container } from 'react-bootstrap';
+import React from 'react';
+import './HomeCards.css';
+import img from '../components/images/books.jpg';
 
-const style = {
-  card: {
-    margin: 20,
-    background: "#BB3E03",
-  }
 
-};
 
 const Home = [
   { clubName: "club111", id: 123, userName: "somthing ABC" },
   { clubName: "club222", id: 234, userName: "somthing BCD" },
   { clubName: "club333", id: 345, userName: "somthing CDE" },
-  { clubName: "club444", id: 456, userName: "somthing DEF" },
-  { clubName: "club555", id: 567, userName: "somthing EFG" },
-  { clubName: "club666", id: 678, userName: "somthing FGH" }
-
+  { clubName: "club111", id: 123, userName: "somthing ABC" },
+  { clubName: "club222", id: 234, userName: "somthing BCD" },
+  { clubName: "club333", id: 345, userName: "somthing CDE" },
 ]
-function Greeting() {
-  // Declare a state variable `clubPage` using `useState`
-  // Give the method to update it a name, `setClubPages`
-
-  let [WelcomLetter] = useState(
-    'Welcome!');
-  // Convert `group` to a state variable using the `useState` hook.
-  // Set to an initial value to an array 
-  // let [clubPages] = useState(["?????"]);
+function CardItem() {
 
   return (
-    <section class="row justify-center">
-      <div style={style.card}>
-        {/* Render the `greeting` state variable */}
-        <Container>
-          <p className="card-text">{WelcomLetter}</p>
-        </Container>
-        {/* Render each member from the `clubs` array */}
-        {Home.map(club => (
-          <>
+    Home.map(club => (
 
-            <div fluid className='jumbotron'>
-              <CardColumns>
-                <section className="row justify-center">
-                  <div className="jumbotron">
+      <>
+        <div className='cards'>
+          <div className='cards__item'>
+            <div className='cards__item__link'>
+              <figure className='cards__item__pic-wrap' data-category={club.userName}>
 
-                    <Col>
-                      <Card.Text>{club.clubName}</Card.Text>
-                    </Col>
+                <img
+                  className='cards__item__img'
+                  alt='book'
+                  src={img}
+                />
 
-                    <Col>
-                      {club.userName}
-                    </Col>
+              </figure>
 
-                    <Button type="Button">Go to the page</Button>
+              <div className='cards__item__info'>
+                <h2 className='cards__item__text'>{club.clubName}</h2>
+              </div>
 
-                  </div>
-
-                </section>
-              </CardColumns>
             </div>
+          </div>
+        </div >
+      </>
 
-          </>
-        ))}
+    ))
 
-      </div>
-    </section>
   );
 }
 
-export default Greeting;
+export default CardItem;

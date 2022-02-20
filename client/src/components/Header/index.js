@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import img from '../images/reading.jpg';
 
+const styles = {
+  hederBox: {
+    margin: 20,
+  }
+}
 
 const Header = () => {
   const logout = (event) => {
@@ -14,20 +19,16 @@ const Header = () => {
 
     <header className="bg-primary text-light mb-4 flex-row justify-center">
 
-      <div className="flex-row justify-center col-md-3">
+      <div style={styles.hederBox} className="hederBox flex-row justify-center col-md-2">
 
         <img src={img} className="img" alt="img" />
 
       </div>
 
-      <div className="flex-row  col-md-3">
+      <div style={styles.hederBox} className="flex-row col-md-2 ">
 
-        <Link className="text-light" to="/">
-
-          <h1 className="m-0">Book club</h1>
-        </Link>
-
-        <p className="m-0">I am glad you are here at bookClub. I created this platform that gives readers easy acces to the things they love. moreover, maybe they will share their own stories.</p>
+        <h1 className=" m-0">Book club</h1>
+        <p >I am glad you are here at bookClub. I created this platform that gives readers easy acces to the things they love. moreover, maybe they will share their own stories.</p>
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -50,8 +51,8 @@ const Header = () => {
         </div>
       </div>
 
-
     </header >
+
   );
 };
 
