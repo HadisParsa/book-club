@@ -1,6 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant+Unicase:wght@300;700&display=swap');
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -57,7 +55,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Shizuru', cursive;;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -356,10 +354,9 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  font-size: 16px;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 40px;
   color: #1a1a1a;
 }
 
@@ -369,7 +366,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Cormorant Unicase', serif;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -428,7 +426,7 @@ a {
 }
 
 a:hover {
-  color: #065b83;
+  color: #005F73;
   text-decoration: underline;
 }
 
@@ -883,7 +881,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #2d3e50 !important;
+  color: #001219 !important;
 }
 
 .text-info {
@@ -920,35 +918,35 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background-color: #005F73 !important;
 }
 
 .bg-info {
-  background-color: #1bbc9b !important;
+  background-color: #94D2BD !important;
 }
 
 .bg-danger {
-  background-color: #e64c66 !important;
+  background-color: #f85344 !important;
 }
 
 .bg-light {
-  background-color: #d9e9e8 !important;
+  background-color: #E9D8A6 !important;
 }
 
 .bg-dark {
-  background-color: #1a1a1a !important;
+  background-color: #001219 !important;
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: #E9D8A6 !important;
 }
 
 .bg-black {
-  background-color: #000000 !important;
+  background-color: #001219 !important;
 }
 
 .bg-link {
-  background-color: #1b89bc !important;
+  background-color: #EE9B00 !important;
 }
 
 /* DISPLAY */
@@ -983,7 +981,7 @@ a:hover {
   border: 1px solid transparent;
   outline: none;
   color: #1a1a1a;
-  background-color: #aeaeae;
+  background-color: #9B2226;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
@@ -1021,21 +1019,21 @@ a:hover {
 }
 
 .btn.btn-danger {
-  background-color: #e64c66;
-  color: #ffffff;
+  background-color: #AE2012;
+  color: #E9D8A6;
 }
 
 .btn.btn-danger:hover {
-  background-color: #ee8294;
+  background-color: #BB3E03;
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #94D2BD;
   color: #ffffff;
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: #0A9396;
 }
 
 .btn.btn-light {
@@ -1071,7 +1069,7 @@ a:hover {
 }
 
 .btn.btn-black:hover {
-  background-color: #666666;
+  background-color: #CA6702;
 }
 
 .btn.btn-link {
@@ -1090,8 +1088,8 @@ a:hover {
 
 .card .card-header {
   padding: 0.375rem;
-  background-color: #2d3e50;
-  color: #d9e9e8;
+  background-color: #EE9B00;
+  color: #94D2BD;
 }
 
 .card .card-body {
@@ -1099,7 +1097,7 @@ a:hover {
 }
 
 .card .card-footer {
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid #001219;
   padding: 0.375rem;
 }
 
@@ -1145,7 +1143,7 @@ form .form-label {
 form .form-input {
   width: 100%;
   padding: 0.75rem;
-  color: #1a1a1a;
+  color: #188b65;
   background-color: #ffffff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
@@ -1710,3 +1708,4 @@ label form [type='radio'] {
   font-weight: 300;
   font-style: italic;
 }
+
