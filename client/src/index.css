@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant+Unicase:wght@300;700&display=swap');
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -354,10 +354,9 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  font-size: 16px;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 40px;
   color: #1a1a1a;
 }
 
@@ -367,7 +366,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Cormorant Unicase', serif;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -926,7 +926,7 @@ a:hover {
 }
 
 .bg-danger {
-  background-color: #e64c66 !important;
+  background-color: #f85344 !important;
 }
 
 .bg-light {
@@ -1143,7 +1143,7 @@ form .form-label {
 form .form-input {
   width: 100%;
   padding: 0.75rem;
-  color: #1a1a1a;
+  color: #188b65;
   background-color: #ffffff;
   margin: 0.625rem 0;
   font-size: 1.2rem;
@@ -1708,3 +1708,4 @@ label form [type='radio'] {
   font-weight: 300;
   font-style: italic;
 }
+

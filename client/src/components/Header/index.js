@@ -2,14 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
-import img from '../images/book.jpg';
+import img from '../images/reading.jpg';
 
-
-const style = {
-  img: {
-    margin: 40,
-  }
-};
 
 const Header = () => {
   const logout = (event) => {
@@ -18,22 +12,22 @@ const Header = () => {
   };
   return (
 
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div style={style.img}>
-          <img src={img} className="img" alt="img" />
-        </div>
+    <header className="bg-primary text-light mb-4 flex-row justify-center">
 
-        <div>
+      <div className="flex-row justify-center col-md-3">
 
-          <Link className="text-light" to="/">
+        <img src={img} className="img" alt="img" />
 
-            <h1 className="m-0">Book club</h1>
+      </div>
 
-          </Link>
+      <div className="flex-row  col-md-3">
 
-          <p className="m-0">I am glad you are here at bookClub. I created this platform that gives readers easy acces to the things they love. moreover, maybe they will share their own stories.</p>
-        </div>
+        <Link className="text-light" to="/">
+
+          <h1 className="m-0">Book club</h1>
+        </Link>
+
+        <p className="m-0">I am glad you are here at bookClub. I created this platform that gives readers easy acces to the things they love. moreover, maybe they will share their own stories.</p>
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -41,6 +35,7 @@ const Header = () => {
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
+
             </>
           ) : (
             <>
@@ -54,7 +49,9 @@ const Header = () => {
           )}
         </div>
       </div>
-    </header>
+
+
+    </header >
   );
 };
 

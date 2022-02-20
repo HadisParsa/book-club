@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../components/styles/style.css';
+
+
 
 function Form() {
   // Here we set two state variables for storyTitle and userStory using `useState`
@@ -25,32 +26,39 @@ function Form() {
   };
 
   return (
-    <form>
-      <div className="form-group">
-        <p>
-          Title: {storyTitle} {userStory}
-        </p>
-        <input
-          value={storyTitle}
-          name="storyTitle"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Story title"
-        />
+    <main className="flex-row justify-center mb-4">
+      <div className="col-12 col-lg-10">
+        <div className="card">
+          <form>
+            <h4 className="card-header bg-dark text-light p-2">Title: {storyTitle}</h4>
 
-        <input
-          value={userStory}
-          name="userStory"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Your story"
-        />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
+            <div className="card-body">
+              <input
+                className="form-input"
+                value={storyTitle}
+                name="storyTitle"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Story title"
+              />
+              <textarea
+                className="form-input"
+                value={userStory}
+                name="userStory"
+                onChange={handleInputChange}
+                type="text"
+                placeholder="Your story"
+              />
+              <button
+                className="btn btn-block btn-primary"
+                type="button" onClick={handleFormSubmit}>
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </form>
-
+    </main>
   );
 }
 

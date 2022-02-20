@@ -1,6 +1,6 @@
 // We have to first import `useState` with React in order to take advantage of the hook
 import React, { useState } from 'react';
-import { Col, Card, Button } from 'react-bootstrap';
+import { Col, Button, Card, CardColumns, Container } from 'react-bootstrap';
 
 const style = {
   card: {
@@ -30,35 +30,42 @@ function Greeting() {
   // let [clubPages] = useState(["?????"]);
 
   return (
+    <section class="row justify-center">
+      <div style={style.card}>
+        {/* Render the `greeting` state variable */}
+        <Container>
+          <p className="card-text">{WelcomLetter}</p>
+        </Container>
+        {/* Render each member from the `clubs` array */}
+        {Home.map(club => (
+          <>
 
-    <div style={style.card}>
-      {/* Render the `greeting` state variable */}
-      <p className="card-text">{WelcomLetter}</p>
+            <div fluid className='jumbotron'>
+              <CardColumns>
+                <section className="row justify-center">
+                  <div className="jumbotron">
 
-      {/* Render each member from the `clubs` array */}
-      {Home.map(club => (
-        <>
-          <section className="row justify-center">
-            <div className="jumbotron">
+                    <Col>
+                      <Card.Text>{club.clubName}</Card.Text>
+                    </Col>
 
-              <h2 className="card-header">user num1</h2>
+                    <Col>
+                      {club.userName}
+                    </Col>
 
-              <Col>
-                <Card.Text>{club.clubName}</Card.Text>
-              </Col>
+                    <Button type="Button">Go to the page</Button>
 
-              <Col>
-                {club.userName}
-              </Col>
+                  </div>
 
-              <Button type="Button">Go to the page</Button>
-
+                </section>
+              </CardColumns>
             </div>
-          </section>
-        </>
-      ))}
 
-    </div>
+          </>
+        ))}
+
+      </div>
+    </section>
   );
 }
 
