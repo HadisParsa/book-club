@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 
-
 function Form() {
   // Here we set two state variables for storyTitle and userStory using `useState`
   const [storyTitle, setStoryTitle] = useState('');
