@@ -10,6 +10,10 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('thoughts');
     },
+    //.... : async () => {
+    //return await .findByID({club.id}).populate('....');
+    //craet typDefs first add Query
+
   },
 
   Mutation: {
@@ -32,10 +36,32 @@ const resolvers = {
       }
 
       const token = signToken(user);
-
-      return { token, user };
+      return { token, user }
     },
-  },
+
+    saveBook: async (parent, { input }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedBooks: input } },
+          { new: true, runValidators: true }
+        )
+        return updatedUser
+      }
+    },
+    deleteBook: async (parent, { bookId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedBooks: { bookId: bookId } } },
+          { new: true }
+        );
+
+        return { token, user };
+      }
+    }
+  }
+
 };
 
 module.exports = resolvers;
