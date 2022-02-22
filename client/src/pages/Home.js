@@ -3,18 +3,10 @@ import React from 'react';
 import './HomeCards.css';
 import img from '../components/images/books.jpg';
 
-//change it to the correct one
-//const Home = () => {
-// const { username, data } = useQuery(QUERY_USER);
-//const profiles = data?.profiles || [];
-
 const Home = [
-  { clubName: "club111", id: 123, userName: "somthing ABC" },
-  { clubName: "club222", id: 234, userName: "somthing BCD" },
-  { clubName: "club333", id: 345, userName: "somthing CDE" },
-  { clubName: "club111", id: 123, userName: "somthing ABC" },
-  { clubName: "club222", id: 234, userName: "somthing BCD" },
-  { clubName: "club333", id: 345, userName: "somthing CDE" },
+  { clubName: "Hadis Parsa", id: 123, userName: "Cool DEVELOPER" },
+  { clubName: "Captain Marvel", id: 234, userName: "Carol Danvers" },
+  { clubName: "Multiverse of Madness", id: 345, userName: "Doctor Stephen, Strange" },
 ]
 function CardItem() {
 

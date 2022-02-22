@@ -13,6 +13,7 @@ import ClubPage from './pages/Clubpage';
 
 import Story from './pages/Story';
 import SearchBooks from './pages/SearchBooks';
+import SavedBooks from './pages/SavedBooks';
 
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -50,6 +51,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
+
           <div className="container">
 
             <Route exact path="/">
@@ -66,6 +68,10 @@ function App() {
 
             <Route exact path="/SearchBooks">
               <SearchBooks />
+            </Route>
+
+            <Route exact path="/SavedBooks">
+              <SavedBooks />
             </Route>
 
             <Route exact path="/login">
