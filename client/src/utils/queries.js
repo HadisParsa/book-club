@@ -5,11 +5,15 @@ export const QUERY_USER = gql`
     user(username: $username) {
       _id
       username
-      email
-      thoughts {
-        _id
-        thoughtText
-        createdAt
+        email 
+        bookCount
+      savedBooks {
+        authors
+        description
+        bookId
+        image
+        link
+        title
       }
     }
   }
