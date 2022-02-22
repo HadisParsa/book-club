@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import img from '../components/images/Story.jpg';
 
 function Form() {
   // Here we set two state variables for storyTitle and userStory using `useState`
@@ -25,39 +25,46 @@ function Form() {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <form>
-            <h4 className="card-header bg-dark text-light p-2">Title: {storyTitle}</h4>
+    <main className="flex-row justify-center mb-4 ">
 
+      <div className="card ">
+        <form>
+          <h4 className="card-header bg-info ">  <img
+            alt='book'
+            src={img}
+          /></h4>
+
+          <div className="card-body">
+            <input
+              className="form-input"
+              value={storyTitle}
+              name="storyTitle"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Story title"
+            />
+            <textarea
+              className="form-input"
+              value={userStory}
+              name="userStory"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Your story"
+            />
+            <button
+              className="btn btn-block btn-primary"
+              type="button" onClick={handleFormSubmit}>
+              Submit
+            </button>
+            <h4 className="card-header bg-link text-dark p-2 ">Title: {storyTitle}</h4>
             <div className="card-body">
-              <input
-                className="form-input"
-                value={storyTitle}
-                name="storyTitle"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Story title"
-              />
-              <textarea
-                className="form-input"
-                value={userStory}
-                name="userStory"
-                onChange={handleInputChange}
-                type="text"
-                placeholder="Your story"
-              />
-              <button
-                className="btn btn-block btn-primary"
-                type="button" onClick={handleFormSubmit}>
-                Submit
-              </button>
+              <textarea className="form-input" value={userStory} />
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-    </main>
+
+    </main >
   );
 }
 
