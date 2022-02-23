@@ -69,7 +69,7 @@ To start the services independently: Front end:
 ```md
 cd client && npm start
 ````
-```md
+
 Back end:
 ```md
 cd server && npm watch
